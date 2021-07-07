@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>定位</title>
+  <style>
+    .main{
+      height: 300px;
+      position: relative;
+    }
+    .main .left{
+      position:absolute;
+      top:0;
+      left:0;
+      width:300px;
+      height:300px;
+      background: #ff0097
+    }
+    .main .right{
+      position:absolute;
+      top:0;
+      left:302px;/*同时设置左和右，得到的宽度即为100%-left-right*/
+      right:0;
+      height:300px;
+      background: #4eb3b9
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <div class="left">
+    左边内容
+  </div>
+  <div class="right">
+    右边内容
+  </div>
+</div>
+</body>
+</html>

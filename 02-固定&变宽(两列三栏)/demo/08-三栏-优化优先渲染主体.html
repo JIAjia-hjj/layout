@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>三列优化</title>
+  <style>
+    body{
+      /*left使用了position: relative，所以就意味着在center开始的区域，还存在着一个left的宽度。所以页面的最小宽度应该设置为100+400+100=600px：*/
+      min-width: 600px;
+    }
+    .main{
+      height: 300px;
+      position: relative;
+      padding:0 400px 0 100px;
+
+    }
+    .left,.right, .center{
+      float: left;
+      height:100%;
+    }
+    .main .left{
+      width: 100px;
+      /*根据浮动的特性，由于center的宽度为100%，即占据了第一行的所有空间，所以left和right被“挤”到了第二行。*/
+      margin-left: -100%;
+      /*将left的位置在原有位置基础上左移300px*/
+      position: relative;
+      left: -100px;
+      background: #ff0097;
+    }
+    .main .right{
+      width:400px;
+      margin-right: -400px;
+      background: #4eb3b9;
+    }
+    .center{
+      width:100%;
+      background: #7cb91a;
+    }
+
+  </style>
+</head>
+<body>
+<div class="main">
+  <div class="center">
+    中间内容
+  </div>
+  <div class="left">
+    左边内容
+  </div>
+  <div class="right">
+    右边内容
+  </div>
+</div>
+</body>
+</html>
