@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>蒙版动画</title>
+  <style>
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    html,
+    body {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: "Open Sans","PingFang SC","Microsoft YaHei","Helvetica Neue","Hiragino Sans GB","WenQuanYi Micro Hei",Arial,sans-serif;
+    }
+
+    @keyframes move {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 100% 0;
+      }
+    }
+
+    .bg {
+      background: url(img/bg1.jpg);
+      background-size: cover;
+      position: fixed;
+      top: -20px;
+      left: -20px;
+      right: -20px;
+      bottom: -20px;
+      filter: blur(15px);
+      z-index: -1;
+    }
+
+    .slogan {
+      color: white;
+      margin-top: 24px;
+      font-size: 36px;
+      font-weight: 400;
+    }
+
+    .mask {
+      width: 340px;
+      height: 196px;
+      animation: move 100s infinite;
+      background-image: url(img/bg1.jpg);
+      background-size: cover;
+      /*mask: url(img/mask.svg);*/
+      mask: url(http://www2.djicdn.com/assets/images/v3/logo-black2-145dcb13c56f36a65d084180a42136fa.svg);
+      mask-size: cover;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="mask"></div>
+  <h1 class="slogan">The Future Of Possible</h1>
+</body>
+</html>

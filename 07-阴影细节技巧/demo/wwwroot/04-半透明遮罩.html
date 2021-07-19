@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>半透明遮罩</title>
+  <style>
+    div {
+      position: absolute;
+      width: 200px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border: 1px solid #666;
+      cursor: pointer;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all .1s;
+    }
+    div:hover {
+      box-shadow: 0 0 0 50vmax rgba(0, 0, 0, .5);
+      transform: translate(-50%, -60%);
+    }
+  </style>
+</head>
+<body>
+<p>背景文字背景文字背景文字背景文字</p>
+<div>Hover Me</div>
+</body>
+</html>

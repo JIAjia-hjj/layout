@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03-绝对定位-实现固定的等高</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .cont-wrap {
+      /*border: 1px solid gray;*/
+      /*padding: 10px;*/
+      height: 500px;
+      position: relative;
+    }
+
+    .main, .left {
+      position: absolute;
+      border: 1px solid red;
+      width: 50px;
+      top: 0;
+      bottom: 0;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .main {
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+<ul class="cont-wrap">
+  <li class="left">动态内容等高布局动态内容等高布局动态内容等高布局动态内容等高布局</li>
+  <li class="main">动态内容等高布局</li>
+</ul>
+</body>
+</html>

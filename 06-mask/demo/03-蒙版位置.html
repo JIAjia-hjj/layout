@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>蒙版位置</title>
+  <style>
+    img{
+      -webkit-mask-image: url(img/mask1.png);
+      -webkit-mask-repeat:no-repeat;
+      -webkit-mask-position: center;
+    }
+  </style>
+</head>
+<body>
+<img src="img/origin1.jpeg" alt="" id="img">
+<script>
+  (function(window){
+    var img = document.getElementById('img'),
+        isIn = false;
+    img.onmouseover = function(e){
+      isIn = true;
+    }
+
+    img.onmousemove = function(e){
+      if(isIn){
+        img.style.cssText = '-webkit-mask-position:'+(e.pageX-150)+'px '+(e.pageY-123)+'px;'
+      }
+    }
+    img.onmouseout = function(e){
+      isIn = false;
+    }
+  })(window)
+</script>
+</body>
+</html>

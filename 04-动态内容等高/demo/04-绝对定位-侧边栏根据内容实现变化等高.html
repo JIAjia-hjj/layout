@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04-绝对定位-侧边栏根据内容实现变化等高</title>
+  <style>
+    *{margin: 0;padding: 0; list-style: none;}
+    .cont-wrap {
+      border:1px solid gray;
+      position:relative;
+      width:100px;
+      height: 300px;
+    }
+    .main{
+      margin-left:50px;
+      word-break:break-all;
+      border:1px solid red;
+    }
+    .left{
+      position:absolute;
+      word-break:break-all;
+      border:1px solid red;
+      width:50px;
+      top:0;
+      bottom:0;
+    }
+  </style>
+</head>
+<body>
+<ul class="cont-wrap">
+  <li class="left">动态内容等高布局动态内容等高布局动态内容等高布局动态内容等高布局</li>
+  <li class="main">动态内容等高布局</li>
+</ul>
+</body>
+</html>

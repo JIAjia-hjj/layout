@@ -1,0 +1,130 @@
+@mixin margin-center-x($width) {
+    position: absolute;
+    left: 50%;
+    margin-left: ($width / -2);
+}
+
+@mixin margin-center-y($height) {
+    position: absolute;
+    top: 50%;
+    margin-top: ($height / -2);
+}
+
+@mixin margin-center($width,$height) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: ($height / -2) 0 0 ($width / -2);
+}
+
+@mixin cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+//opacity
+@mixin opacity($opacity){
+    opacity: $opacity;
+    $o : ($opacity * 100);
+    filter:Alpha(Opacity=$o);
+}
+
+//keyframes
+@mixin keyframes($name){
+    @-webkit-keyframes #{$name} {@content};
+    @-moz-keyframes #{$name} {@content};
+    @-o-keyframes #{$name} {@content};
+    @keyframes #{$name} {@content};
+}
+
+//transform
+@mixin transform($transforms){
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    -o-transform: $transforms;
+    transform: $transforms;
+}
+
+//transition
+@mixin transition($transition...){
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin fixedCover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin border-radius($lt,$rt,$rb,$lb) {
+    -webkit-border-radius: $lt $rt $rb $lb;
+    -moz-border-radius: $lt $rt $rb $lb;
+    border-radius: $lt $rt $rb $lb;
+}
+
+@mixin line-clamp-overflow($line) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin word-break {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+@mixin display-inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+//ellipsis
+@mixin ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin text-hide{
+    font-size:0;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+@mixin filter($s){
+    -webkit-filter: $s; /* Chrome, Safari, Opera */
+    filter: $s;
+}

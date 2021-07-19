@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>单侧投影</title>
+  <style>
+    .left,
+    .right,
+    .top,
+    .bottom {
+      margin: 30px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border: 1px solid #000;
+      text-align: center;
+
+    }
+    .left {
+      box-shadow: -7px 0 5px -5px #333;
+    }
+    .right {
+      box-shadow: 7px 0 5px -5px #333;
+    }
+    .top {
+      box-shadow: 0 -7px 5px -5px #333;
+    }
+    .bottom {
+      box-shadow: 0 7px 5px -5px #333;
+    }
+  </style>
+</head>
+<body>
+<div class='left'>左</div>
+<div class='right'>右</div>
+<div class='top'>上</div>
+<div class='bottom'>下</div>
+</body>
+</html>

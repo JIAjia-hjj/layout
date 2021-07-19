@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02-table 布局或者伪table</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .cont-wrap {
+      border:1px solid gray;
+      display:table;
+      /*overflow:hidden;*/
+      width:100%;
+    }
+    .cont-wrap li{
+      display:table-cell;
+      word-break:break-all;
+      border:1px solid red;
+      width:50px;
+    }
+  </style>
+</head>
+<body>
+<ul class="cont-wrap">
+  <li>动态内容等高布局动态内容等高布局动态内容等高布局动态内容等高布局</li>
+  <li>动态内容等高布局</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05-padding+margin</title>
+  <style>
+    *{margin: 0;padding: 0; list-style: none;}
+    .cont-wrap {
+      overflow:hidden;
+      border:1px solid red;
+    }
+    .left,.main{
+      margin-left:20px;
+      float:left;
+      word-break:break-all;
+      width:50px;
+      padding-bottom:3000px;
+      margin-bottom:-3000px;
+      border:1px solid gray;
+    }
+  </style>
+</head>
+<body>
+<ul class="cont-wrap">
+  <li class="left">动态内容等高布局动态内容等高布局动态内容等高布局动态内容等高布局</li>
+  <li class="main">动态内容等高布局</li>
+</ul>
+</body>
+</html>
