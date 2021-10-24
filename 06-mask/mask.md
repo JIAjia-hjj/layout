@@ -22,7 +22,7 @@
 
 + `mask`属性实际上已经成为了诸多`mask-*`的缩写，这和`background`, `border`性质是一样的。
 
-#### 3.1.【mask-image】
+#### 3.1.mask-image
 
 `mask-image`指遮罩使用的图片资源，默认值是`none`，也就是无遮罩图片。因此，和`border`属性中的`border-style`属性类似，是一个想要有效果就必须设定的属性值。
 
@@ -39,7 +39,7 @@
 
 
 
-#### 3.2.【mask-repeat】
+#### 3.2.mask-repeat
 
 默认值为repeat，可选值与background-repeat相同。
 
@@ -64,7 +64,7 @@ mask-repeat: repeat-x, repeat-y;
 
 
 
-#### 3.3.【mask-position】
+#### 3.3.mask-position
 
 默认值为0 0，可选值与background-position相同。
 
@@ -84,7 +84,7 @@ mask-position: 10px 5rem;
 mask-position: 0 0, center;
 ```
 
-#### 3.4.【mask-clip】
+#### 3.4.mask-clip
 
 默认值为border-box，可选值与background-clip相同。
 
@@ -103,7 +103,7 @@ mask-position: 0 0, center;
 
 
 
-#### 3.5.【mask-origin】
+#### 3.5.mask-origin
 
 默认值为border-box，可选值与background-origin相同。
 
